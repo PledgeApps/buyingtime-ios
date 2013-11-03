@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="sceenMain" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="timeLabel" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="11:54 AM" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QZ3-Om-2yb">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4DF-jm-7R1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEo-8R-STd">
+                                <items>
+                                    <navigationItem title="Buying Time" id="HGm-49-YZP"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ane-9W-n2s">
+                                <items>
+                                    <barButtonItem title="Alarms" id="DzK-xX-sMZ">
+                                        <connections>
+                                            <segue destination="Rwr-ZM-Z1a" kind="modal" id="uLM-lu-cQo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" restorationIdentifier="dateLabel" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Sunday, November 3, 2013" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fE2-Dv-2Zf">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="0d0-9M-oCJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QZ3-Om-2yb" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="7OI-K4-MHs"/>
+                            <constraint firstItem="fE2-Dv-2Zf" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="I99-4d-ZaF"/>
+                            <constraint firstItem="fEo-8R-STd" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="RLS-VL-zrX"/>
+                            <constraint firstItem="ane-9W-n2s" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="TM4-P6-rFK"/>
+                            <constraint firstItem="fE2-Dv-2Zf" firstAttribute="top" secondItem="QZ3-Om-2yb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UvD-wP-Gdc"/>
+                            <constraint firstItem="fE2-Dv-2Zf" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="user" id="ast-i3-5eY"/>
+                            <constraint firstItem="QZ3-Om-2yb" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="eKu-Wo-6QO"/>
+                            <constraint firstItem="ane-9W-n2s" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="ewA-de-nSZ"/>
+                            <constraint firstItem="QZ3-Om-2yb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="180" id="hZq-7f-vhE"/>
+                            <constraint firstItem="fEo-8R-STd" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="q1k-Ek-uTc"/>
+                            <constraint firstItem="fE2-Dv-2Zf" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="user" id="tdR-r4-T1P"/>
+                            <constraint firstItem="ane-9W-n2s" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="xVT-VF-nrS"/>
+                            <constraint firstItem="fEo-8R-STd" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="xjv-4p-hZa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="fE2-Dv-2Zf" id="peD-W0-3hi"/>
+                        <outlet property="timeLabel" destination="QZ3-Om-2yb" id="we9-xV-sf2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vg1-Gb-7nQ">
+            <objects>
+                <viewController id="Rwr-ZM-Z1a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ohL-zM-J1a">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ei-8M-vIg">
+                                <items>
+                                    <navigationItem title="Alarms" id="46X-71-fKJ"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pE-X8-0fV">
+                                <items>
+                                    <barButtonItem title="Add Alarm" id="VJa-wL-Kbf"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2pE-X8-0fV" firstAttribute="trailing" secondItem="ohL-zM-J1a" secondAttribute="trailing" type="default" id="8oW-cE-qGf"/>
+                            <constraint firstItem="8ei-8M-vIg" firstAttribute="top" secondItem="ohL-zM-J1a" secondAttribute="top" type="default" id="AdO-9D-jAG"/>
+                            <constraint firstItem="2pE-X8-0fV" firstAttribute="bottom" secondItem="ohL-zM-J1a" secondAttribute="bottom" type="default" id="Hy9-Ta-ykw"/>
+                            <constraint firstItem="2pE-X8-0fV" firstAttribute="leading" secondItem="ohL-zM-J1a" secondAttribute="leading" type="default" id="K0q-UJ-mcZ"/>
+                            <constraint firstItem="8ei-8M-vIg" firstAttribute="trailing" secondItem="ohL-zM-J1a" secondAttribute="trailing" type="default" id="PSa-pK-vRI"/>
+                            <constraint firstItem="8ei-8M-vIg" firstAttribute="leading" secondItem="ohL-zM-J1a" secondAttribute="leading" type="default" id="zAh-Zw-RMf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WbB-X6-Pca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="114"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
